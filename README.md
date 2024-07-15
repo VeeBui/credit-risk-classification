@@ -1,28 +1,28 @@
 # credit-risk-classification
-# Module 12 Report Template
+Violet Bui - Data Bootcamp - Module 10 challenge
+## Data
+- <u>Resources/lending_data.csv</u>: Data from a peer-to-peer lending service used to complete this analysis
+
+## Solution
+- <u>credit_risk_classification.ipynb</u>: A jupyter notebook which loads in the data, splits it into a training set and a test set, fits a model to the data and shows the accuracy of the model.
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+The historical lending activity of a peer-to-peer lending service company was analysed to create a model that can predict the creditworthiness of borrowers. The data was split into a large training set and a smaller test set, then sclearn's LogisticRegression was used to create a model.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithm).
+The desired result was the column "loan_status", which shows a 0 for healthy loans and a 1 for loans that are at risk of defaulting. 
 
 ## Results
-
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
-
-* Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+    
+* Healthy loans:
+    * Precision: 99.64% (an extremely high chance that a predicted healthy loan is actually a healthy loan)
+    * Recall: 99.57% (the vast majority of all healthy loans were correctly identified)
+* Default risk loans:
+    * Precision: 87.46% (a high chance that a predicted risky loan is actually a risky loan)
+    * Recall: 89.28% (a decenty number of risky loans were correctly identified)
 
 ## Summary
 
-Summarise the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+When the model predicted a healthy loan, it was correct 99.64% of the time. The model was less likely to predict default risk cases correctly. Only 87% of predicted default risk cases were correctly identified.
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+This is likely the preferred behaviour, as the lending company want to be certain that the company they back will have a high chance of success.
